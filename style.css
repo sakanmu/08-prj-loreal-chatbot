@@ -11,26 +11,37 @@ body {
   color: #333;
   display: flex;
   justify-content: center;
+  background-color: #fff; /* Clean white background for premium feel */
 }
 
 .page-wrapper {
   width: 90%;
   max-width: 900px;
+  border-top: 4px solid #bfa06b; /* Gold accent line at top */
 }
 
-/* header */
+/* —— header —— */
 .site-header {
   text-align: center;
   padding-top: 50px;
 }
 
+.site-header .logo {
+  max-width: 160px;
+  margin-bottom: 16px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .site-title {
-  font-size: 22px;
-  font-weight: 500;
+  font-size: 28px;
+  font-weight: 700;
+  color: #000;
   margin-bottom: 10px;
 }
 
-/* chat window */
+/* —— chat window —— */
 .chatbox {
   margin: 40px 0;
 }
@@ -42,25 +53,55 @@ body {
   font-size: 18px;
   line-height: 1.5;
   overflow-y: auto;
-  background: #fafafa;
+  background: #fff;
   white-space: pre-line;
+  color: #000;
+
+  /* 🔥 Add these two lines */
+  display: flex;
+  flex-direction: column;
 }
 
-/* messages */
+
+/* —— messages —— */
 .msg {
   margin-bottom: 14px;
   line-height: 1.5;
+  padding: 10px;
+  border-radius: 12px;
+  max-width: 75%;
+  display: inline-block;
+  word-wrap: break-word;
 }
 
 .msg.user {
-  color: #000;
+  background-color: #000;
+  color: #fff;
+  align-self: flex-end;
+  margin-left: auto;
+  text-align: right;
 }
 
 .msg.ai {
-  color: #666666;
+  background-color: #f1f1f1;
+  color: #333;
+  align-self: flex-start;
+  margin-right: auto;
+  text-align: left;
 }
 
-/* input row */
+.latest-question {
+  font-weight: bold;
+  background-color: #f1f1f1;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 6px;
+  display: inline-block;
+  max-width: 80%;
+}
+
+
+/* —— input row —— */
 .chat-form {
   display: flex;
   gap: 12px;
@@ -99,7 +140,7 @@ body {
 }
 
 .chat-form button:hover {
-  background: #666666;
+  background: #444;
 }
 
 .chat-form button:focus {
@@ -107,7 +148,7 @@ body {
   outline-offset: 2px;
 }
 
-/* visually hidden */
+/* —— visually hidden —— */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -120,7 +161,7 @@ body {
   border: 0;
 }
 
-/* footer */
+/* —— footer —— */
 .site-footer {
   margin: 60px 0 40px;
   text-align: center;
@@ -139,5 +180,6 @@ body {
 }
 
 .site-footer a:hover {
-  color: #666666;
+  color: #bfa06b; /* Gold accent hover */
 }
+
